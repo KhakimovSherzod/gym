@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Fitness Tracker</h1>
+        <form id="fitness-form">
+            <div class="form-group">
+                <label for="activity">Activity:</label>
+                <input type="text" id="activity" name="activity" placeholder="Enter your activity (e.g., Running, Yoga)" required>
+            </div>
+            <button type="submit">Add Workout</button>
+        </form>
+
+        <h2>Workout History</h2>
+        <table id="workout-history">
+            <thead>
+                <tr>
+                    <th>Activity</th>
+                    <th>Duration</th>
+                    <th>Calories Burned</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- History will be populated here -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
